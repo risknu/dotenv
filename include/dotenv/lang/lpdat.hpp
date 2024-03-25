@@ -18,16 +18,18 @@ namespace types {
     const char ban_chars[] = {'=', '"', '\'', '#', '\n', '\0', ';'};
 }
 
-class token {
-public:
-    token(std::string  key_string, std::string  value_string);
-    explicit token(const std::string& to_all_string);
+namespace env_lang {
+    class token {
+    public:
+        token(std::string  key_string, std::string  value_string);
+        explicit token(const std::string& to_all_string);
 
-    [[nodiscard]] std::string get_key() const;
-    [[nodiscard]] std::string get_value() const;
-private:
-    std::string key_string;
-    std::string value_string;
-};
+        [[nodiscard]] std::string get_key() const;
+        [[nodiscard]] std::string get_value() const;
+    private:
+        std::string key_string;
+        std::string value_string;
+    };
+}
 
 #endif //DOTENV_LPDAT_HPP

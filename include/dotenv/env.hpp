@@ -10,7 +10,9 @@
     #include <windows.h>
 #endif
 
-std::string get_env(std::string_view key_name);
-bool set_env(std::string_view key_name, std::string_view value_string);
+namespace env {
+    std::string get_env(std::string_view key_name);
+    bool set_env(std::string_view key_name, std::string_view value_string);
+}
 
 #endif //DOTENV_ENV_HPP
